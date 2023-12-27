@@ -11,9 +11,10 @@
 
 کد زیر دکمه registerButton را به یک شنونده رویداد متصل می‌کند که هنگام کلیک بر روی دکمه اجرا می‌شود:
 
-registerButton.setOnClickListener {
+``` registerButton.setOnClickListener { ```
 
 این listener رویداد شامل کد زیر است:
+```
 if (usernameEditText.text.toString().isEmpty()) {
     usernameEditText.error = "Please enter your username"
 } else if (passwordEditText.text.toString().isEmpty()) {
@@ -23,14 +24,15 @@ if (usernameEditText.text.toString().isEmpty()) {
     val intent = Intent(this, LoginActivity::class.java)
     startActivity(intent)
 }
+ ```
 
 این کد ابتدا بررسی می‌کند که آیا فیلدهای نام کاربری یا رمز عبور خالی هستند. اگر یکی از این فیلدها خالی باشد، یک پیام خطا به کاربر نمایش داده می‌شود. در غیر این صورت، کد زیر اجرا می‌شود:
-//TODO: Create a user account
+``` //TODO: Create a user account ```
 
 این کد هنوز اجرا نمی‌شود، بلکه باید در آینده تکمیل شود تا یک حساب کاربری جدید ایجاد شود.
 
 کد زیر حساب کاربری جدید را ایجاد می‌کند و کاربر را به صفحه ورود منتقل می‌کند:
-val intent = Intent(this, LoginActivity::class.java)
-startActivity(intent)
+``` val intent = Intent(this, LoginActivity::class.java)
+startActivity(intent) ```
 
 این کد یک شیء Intent ایجاد می‌کند که به فعالیت LoginActivity اشاره می‌کند و سپس فعالیت جاری را با استفاده از این شیء متوقف می‌کند. در نتیجه، کاربر به صفحه ورود منتقل می‌شود.
